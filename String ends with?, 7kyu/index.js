@@ -18,6 +18,7 @@
  */
  function solution(str, ending){
     //   check for length of ending, then return str.slice(ending.length) and check if it is equal to ending.
+    if(ending.length < 1){return true}
     return str.slice(ending.length * (-1)) === ending
   }
   
