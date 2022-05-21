@@ -11,14 +11,14 @@
  * 
  * @param {String} str
  * @param {String} ending
- * @returns if return str.slice(ending.length - 1) === ending
+ * @returns if return str.slice(ending.length * (-1)) === ending
  * 
  * time complexity: O(n)
  * space complexity: O(1)
  */
  function solution(str, ending){
     //   check for length of ending, then return str.slice(ending.length) and check if it is equal to ending.
-    return str.slice(ending.length - 1) === ending
+    return str.slice(ending.length * (-1)) === ending
   }
   
   
