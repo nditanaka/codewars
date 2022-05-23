@@ -31,11 +31,11 @@
  * - Take a look at performance: some lists have thousands of elements.
  * - Please ask before translating.
  * 
- * @param {Array} numbers
- * @returns count of truthy elements in array
+ * @param {Array} ls
+ * @returns array with sum of sub-arrays' elements
  * 
  * time complexity: O(n)
- * space complexity: O(1)
+ * space complexity: O(n) ? 
  */
  function partsSums(ls) {
     let result = [0]
