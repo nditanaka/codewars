@@ -34,15 +34,20 @@
  * @param {Array} ls
  * @returns array with sum of sub-arrays' elements
  * 
+ * BIG (O)
  * time complexity: O(n)
- * space complexity: O(n) ? 
+ * space complexity: O(1)
  */
  function partsSums(ls) {
-    let result = [0]
-    for(const n in ls.reverse()){
-      result.push(ls[n]+result[n]);
-    }
-    return result.reverse()
+     /**  
+    * SOLUTION PSEUDOCODE
+    * first we insert 0 at the beginning of the array
+    * then we calculate the sum of every element of input array, ls with 0 at the start
+    * then we iterate over the input array, ls with 0 at the beginning, and map each element of array ls, starting with 0, to the sum of elements - element v.
+    */
+     ls.unshift(0)
+     let sum = ls.reduce(function (i, j) { return i + j }, 0)
+     return ls.map(v => sum = sum - v)
   }
 
 
@@ -82,5 +87,5 @@ function naivepartsSums(ls) {
 }
 
 console.log(partsSums([1, 2, 3, 4, 5]))
-console.log(naivepartsSums([1,2,3,4,5]))
+// console.log(naivepartsSums([1,2,3,4,5]))
 
