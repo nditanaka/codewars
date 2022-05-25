@@ -34,4 +34,6 @@
         }
       }
       return result
-    }
+ }
+    
+ console.log(accum('abcd'))
