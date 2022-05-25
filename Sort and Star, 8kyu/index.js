@@ -14,7 +14,6 @@
  * time complexity: O(nlogn) -> T(n) + T(logn) for comparisons
  * space complexity: O(n)
  */
-
  function twoSort(s) {
       let sorted = s.sort()
       let sortedFirstEl = []
