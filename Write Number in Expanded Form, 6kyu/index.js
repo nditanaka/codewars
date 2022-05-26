@@ -26,17 +26,21 @@
  function expandedForm(num) {
     let numStrArr = String(num).split('')
     let count = numStrArr.length - 1
-    let result = ''
+    let result = []
     for(let i= 0; i< numStrArr.length; i++){
       let nextChar = String(numStrArr[i] * Math.pow(10, count))
       count--
       if(nextChar != 0){
-        result += nextChar
-        console.log('current result', result)
-        if(i < numStrArr.length - 1)result += ' + '
+        result.push(nextChar)
+        if(i < numStrArr.length - 1)result.push('+')
       }
     }
-    return result
+     if (result[result.length -1] === '+') {
+         result.pop()
+     }
+    return result.join(' ')
  }
   
-  console.log(expandedForm(18929))
+console.log(expandedForm(18929))
+console.log(expandedForm(18009))
+console.log(expandedForm(189290))
